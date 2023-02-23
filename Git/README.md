@@ -37,7 +37,7 @@
 
 # Exemplos práticos
 
-# Criando um repositório no GitHub
+## Criando um repositório no GitHub
 
 Vá até seu [GitHub](https://github.com/) e crie um repositório. Sinta-se livre pra configurar o repositório aos seus modos. 
 ![image](https://user-images.githubusercontent.com/80853300/221009477-33d3b353-fed1-4c4f-ac74-6435cc32c8b7.png)
@@ -54,7 +54,7 @@ Aqui temos um tutorial fornecido pelo próprio GitHub sobre como criar um novo r
 
 ![image](https://user-images.githubusercontent.com/80853300/221010549-eb51c694-b195-4a54-af0e-009be47f7a07.png)
 
-# Criando um repositório do zero
+## Criando um repositório do zero
 
 Seguiremos criando um repositório desde o inicío a partir do terminal (também é possível fazer o processo atráves do terminal do VsCode caso se sinta mais à vontade).
 
@@ -72,7 +72,7 @@ Ao criarmos qualquer alteração no nosso repositório, por exemplo a criação 
 
 `git push` Enviando todas as alterações locais para o repositório remoto. 
 
-# Clonando um repositório 
+## Clonando um repositório 
 
 No caso de acabarmos deletando nossos repositórios locais,ou tendo a necessidade de acessar os repositórios por outra máquina, é possível que clonemos os repositórios a partir de nosso GitHub.
 
