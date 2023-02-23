@@ -59,13 +59,17 @@ Aqui temos um tutorial fornecido pelo próprio GitHub sobre como criar um novo r
 Seguiremos criando um repositório desde o inicío a partir do terminal (também é possível fazer o processo atráves do terminal do VsCode caso se sinta mais à vontade).
 
 `git init "repositorioLocal"` Iniciando um repositório e criando a pasta "repositorioLocal" dentro da pasta.
+
 `git branch -M main` Tomando acesso da branch main do nosso repositório.
+
 `git remote add origin https://github.com/Dufyz/repositorioGit.git` Vinculando nosso repositório local ao nosso repositório remoto.
+
 `git push -u origin main` Enviando branch main para o repositório remoto para que seja possível salvarmos nossas alterações no código.
 
 Ao criarmos qualquer alteração no nosso repositório, por exemplo a criação de um arquivo "index.html" ou alterações em um arquivo já existente, devemos utilizar os seguintes comandos:
 
 `git commit -a -m "Criando o arquivo index.html"` Adicionando todas as alterações com a extensão "-a" e salvando-as com o comando "commit". A extensão "-m" serve para adicionar-mos uma descrição as alterações que estamos fazendo.
+
 `git push` Enviando todas as alterações locais para o repositório remoto. 
 
 # Clonando um repositório 
