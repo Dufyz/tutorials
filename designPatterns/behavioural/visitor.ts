@@ -1,3 +1,5 @@
+// representa uma operação a ser executada sobre os elementos da estrutura de um objeto. O visitor permite que você defina uma nova operação sem mudar as classes dos elementos sobre os quais opera.
+
 export abstract class VisitableProduct{
     constructor(protected _name: string, protected _price: number) {}
 

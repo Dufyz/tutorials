@@ -1,3 +1,5 @@
+// Define uma família de algoritmos, encapsular cada um deles e fazê-los intercambiáveis. O strategy permite que o algoritmo varie independentemente dos clientes que o utilizam.
+
 export interface ECommerceProductProtocol {
     name: string;
     price: number;

@@ -1,3 +1,5 @@
+// separa uma abstração da sua implementação, de modo que as duas possam variar independentemente.
+
 export interface DeviceImplementation {
     name: string;
     get power(): boolean;

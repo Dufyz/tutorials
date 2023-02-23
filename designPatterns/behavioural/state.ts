@@ -1,3 +1,5 @@
+// permite que um objeto altere seu comportamento quando seu estado interno muda. O objeto parecerá ter mudado sua classe.
+
 export class ShoppingOrder {
     private _state: ShoppingOrderState = new OrderPending(this);
 

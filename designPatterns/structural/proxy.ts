@@ -1,3 +1,5 @@
+// fornece um objeto representante (surrogate), ou um marcador de outro objeto para controlar o acesso ao mesmo.
+
 export type SytemUserAdressProtocol = {
     street: string;
     number: number

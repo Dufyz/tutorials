@@ -1,3 +1,5 @@
+//Separar a construção de um objeto complexo de sua representação, de modo que o mesmo processo de construção possa criar diferentes representações;
+
 interface CarBuilderProtocol {
     produceMotor(): void,
     produceParts(): void,

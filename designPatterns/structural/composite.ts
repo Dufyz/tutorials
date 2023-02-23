@@ -1,3 +1,5 @@
+// compor objetos em estruturas de árvore para representarem hierarquias partes/todo. Composite permite aos cliente tratarem de maneira uniforme objetos individuais e composições de objetos.
+
 export abstract class ProductComponent {
     abstract getPrice(): number;
 
