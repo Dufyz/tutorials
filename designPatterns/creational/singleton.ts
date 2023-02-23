@@ -1,5 +1,5 @@
-// Garantir que uma classe tenha somente uma instância e fornecer um ponto global de acesso para ela.
-// Quebra o princípio de responsabilidade única 
+/* Garantir que uma classe tenha somente uma instância e fornecer um ponto global de acesso para ela.
+Quebra o princípio de responsabilidade única */
 
 interface User{
     name: string,

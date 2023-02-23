@@ -1,4 +1,6 @@
-// define um objeto que encapsula como um conjunto de objetos interage. O mediator promove o acoplamento fraco ao evitar que os objetos se refiram explicitamente uns aos outros, permitindo que você varie suas interações independentemente.
+/* define um objeto que encapsula como um conjunto de objetos interage.
+O mediator promove o acoplamento fraco ao evitar que os objetos se refiram 
+explicitamente uns aos outros, permitindo que você varie suas interações independentemente. */
 
 export type SellerProduct = { id: string; name: string; price: number }
 

@@ -1,4 +1,5 @@
-// sem violar a encapsulação, captura e externaliza um estado interno de um objeto, de modo que o mesmo possa posteriormente ser restaurado para este estado.
+/* sem violar a encapsulação, captura e externaliza um estado interno de um objeto, 
+de modo que o mesmo possa posteriormente ser restaurado para este estado. */
 
 export class ImageEditor {
     constructor(private filePath: string, private fieFormat: string) { }

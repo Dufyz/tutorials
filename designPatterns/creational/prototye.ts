@@ -1,4 +1,5 @@
-// Especificar os tipos de objetos a serem criados usando uma instância prototípica e criar novos objetos copiando este protótipo;
+/* Especificar os tipos de objetos a serem criados usando uma instância prototípica 
+e criar novos objetos copiando este protótipo; */
 
 interface PersonPrototype {
     clone(): PersonPrototype;
