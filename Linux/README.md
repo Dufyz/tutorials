@@ -1,93 +1,66 @@
 # Linux
 
-# Conceitos 
+# Conceitos básicos
 
-- `sudo` - O sudo é um utilitário de linha de comando para permitir usuários normais a executarem outros utilitários com permissões mais elevadas, de acordo com as suas regras. Ou seja, o sudo controla os acessos dos usuários normais ao super-usuário do sistema, também conhecido como root. !A ideia do sudo é justamente ser o antecedente de cada comando para elevar a sua permissão.!
+-   `sudo` - O sudo é um utilitário de linha de comando para permitir usuários normais a executarem outros utilitários com permissões mais elevadas, de acordo com as suas regras. Ou seja, o sudo controla os acessos dos usuários normais ao "super-usuário" do sistema, também conhecido como root.  A ideia do sudo é justamente ser o antecedente de cada comando para elevar a sua permissão!
 
-`$ sudo su` Muda para o usuário root
+`$ sudo su`  Para mudar para o usuário root.
 
-<!-- Vídeo sobre su, sudo e sudoers. Nesse vídeo eu detalho mais sobre o comando su, sudo e o arquivo sudoers:
+# Comandos básicos e seus usos
 
-- [https://youtu.be/aTbEhjvlmxg](https://youtu.be/aTbEhjvlmxg) -->
+-   `pwd` - Mostra o diretório do arquivo atual.
+    
+-   `ls` - Lista todos os arquivos e pastas presentes no diretório atual.
+ 
+    -   `-l` - Lista arquivos em formato longo.
+    -   `-h` - Lista arquivos ocultos.
+    -   `-@` - Mostra atributos estendidos.
+   
+-   `cd` - Mudar diretório
+    -   `.` - Permanece no diretório atual.
+    -   `..` - Volta para um diretório acima.
+    -   `/` - O diretório root ou a separação de diretórios para o caminho.
+    -   `~` - Volta o diretório para a home.
+    -   `-` Volta para o diretório anterior ao que você estava.
+  
+-   `tree` - Mostra a árvore de arquivos e/ou pastas do diretório atual.
+    -   `d` - diretórios
+    -   `a` - mostra arquivos ocultos
 
-# Comandos básicos e suas funções
+<!-- 
+-   `cat` - concatena e/ou mostra o conteúdo de um arquivo
+    -   `n` - enumera as linhas
+ 
+-   `tail` - lista as últimas linhas do arquivo
+    -   `NÚMERO` - mostra a quantidade de linhas que for adicionado em `NÚMERO`.
+    -   `f` - continua assistindo o arquivo em busca de novos dados.
 
-## Navegação
+-   `wc` - conta linhas, palavras e caracteres
+    -   `l` - linhas
+    -   `m` - caracteres
+    -   `w` - palavras
+--> 
 
-- `pwd` - print working directory (mostra o caminho do diretório atual)
-- `ls` - lista tudo no diretório atual
-    - `a` - inclui entradas que o nome começa com ponto (arquivos ou diretórios ocultos)
-    - `l` - lista em formato longo
-    - `h` - com -l, é um sufixo de tamanho para facilitar a leitura
-    - `@` - mostra atributos estendidos
-
-- `cd` - change directory
-    - `.` - diretório atual
-    - `..` - diretório acima
-    - `/` - o diretório root ou a separação de diretórios
-    - `~` - home (cd sem nada vai para a home)
-    - `` menos - volta para o diretório que anterior
-- `tree` - mostra a árvore do diretório atual
-    - `d` - diretórios
-    - `a` - mostra arquivos ocultos
-- `cat` - concatena e/ou mostra o conteúdo de um arquivo
-    - `n` - enumera as linhas
-- `tail` - lista as últimas linhas do arquivo
-    - `NÚMERO` - mostra a quantidade de linhas que for adicionado em `NÚMERO`.
-    - `f` - continua assistindo o arquivo em busca de novos dados.
-- `wc` - conta linhas, palavras e caracteres
-    - `l` - linhas
-    - `m` - caracteres
-    - `w` - palavras
-
-
-<!-- Vídeo sobre permissões no Linux. Isso vai te ajudar a entender melhor como o sistema de Usuários, grupos e permissões no Linux (Ubuntu):
-
-- [https://youtu.be/S2h92LNcEz8](https://youtu.be/S2h92LNcEz8) -->
-
-
-## Manipulando arquivos e diretórios
-
-- `cp` - copia arquivos ou diretórios
-    - `R` - copia o diretório em modo recursivo
+-   `cp` - copia arquivos ou diretórios
+    -   `R` - copia o diretório em modo recursivo
         
-        **Obs.:** Segundo o `man` (manual) do `cp`, se tiver uma barra (/) no final do diretório original, `cp` pode copiar apenas o conteúdo do diretório e não o diretório em si (eu não vi isso ocorrer em testes).
+        **Obs.:** Segundo o `man` (manual) do `cp`, se tiver uma barra (/) no final do diretório original, `cp` pode copiar apenas o conteúdo do diretório e não o diretório em si (eu não vi isso ocorrer em testes).
         
-- `mv` - move arquivos ou diretórios (com mv você pode renomear arquivos ou diretórios)
-- `mkdir` - cria um diretório (use aspas ou barra invertida para separar caracteres inválidos)
-    - `p` - cria uma estrutura inteira sem gerar erros
+-   `mv` - Move ou renomeia arquivos e diretórios.
+    
+-   `mkdir` - Cria um diretório.
         
-        Obs.: você pode usar chaves para criar múltiplos sub-diretórios.
-        
-- `rm` - apaga arquivos e diretórios
-    - `R` - modo recursivo para diretórios
-    - `f` - modo forçado e silencioso
-- `touch` - muda os tempos de acesso e modificação de um arquivo. Grande parte dos casos, usamos este comando para criar um arquivo vazio.
-
-## Alguns símbolos e operadores úteis
-
-- `;` - permite executar vários comandos na mesma linha. Roda todos os comandos, mesmo se ocorrer algum erro.
-- `&&` - permite executar vários comandos na mesma linha. Se o comando anterior não gerar nenhum erro, continua a corrente de comandos, do contrário, para no momento que ocorrer um erro.
-- `||` - permite executar vários comandos na mesma linha. Ele funciona de maneira oposta ao anterior, ou seja, se ocorrer algum erro no comando anterior, executa o próximo comando, do contrário, para no primeiro comando que **NÃO** gerar um erro.
-- `|` - Joga a saída (output) de um comando para a entrada (input) de outro.
-- `>` - Joga a saída de um comando e redireciona para um arquivo. Apaga o arquivo todo e substitui seu conteúdo.
-- `>>` - Joga a saída de um comando e redireciona para um arquivo. Não apaga o que estiver no arquivo, apenas adiciona o novo conteúdo na última linha.
-- `&` - Joga para o background. Veja `jobs` e `fg` para complementar
-
-## Background e Foreground
-
-- `jobs` - mostra trabalhos em execução
-- `fg %n` - leva o que estiver em background para o foreground
-- `bg %n` - continua um job em background
-- `kill %n` - mata um job
-
-## Outros comandos
-
-- `nano` - editor de textos
-- `file` - mostra o tipo do arquivo
-- `history` - histórico de comandos já digitados
-- `pkill` - mata processos
-- `whoami` - mostra seu usuário
-- `hostname` - mostra o nome do seu computador
-- `uname` - mostra dados sobre o sistema
-- `ps aux` - mostra todos os processos rodando no sistema no momento da execução
+-   `rm` - apaga arquivos e diretórios 
+    -   `R` - Modo recursivo para diretórios
+    -   `f` - Modo forçado e silencioso
+    
+-   `touch` - Muda os tempos de acesso e modificação de um arquivo. Grande parte dos casos, usamos este comando para criar um arquivo vazio.
+  
+-   `nano` - Editor de textos
+-   `file` - Mostra o tipo do arquivo
+-   `history` - Histórico de comandos já digitados
+-   `pkill` - Mata processos
+-   `whoami` - Mostra seu usuário
+-   `hostname` - Mostra o nome do seu computador
+-   `uname` - Mostra dados sobre o sistema
+-   `ps aux` - Mostra todos os processos rodando no sistema no momento da execução
